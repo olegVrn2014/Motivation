@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Motivation</string>
+    <string name="bottom_todo">Заметки</string>
+    <string name="bottom_advice">Советы</string>
+    <string name="bottom_motivation">Мотивация</string>
+    <string name="bottom_habits">Привычки</string>
+    <string name="bottom_settings">Настройки</string>
+</resources>
