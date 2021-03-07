@@ -1,6 +1,7 @@
 package ru.livemotivation.motivation.screens.main;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -118,6 +120,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.NoteViewHolder> {
                 @Override
                 public void onClick(View view) {
                     App.getInstance().getNoteDao().delete(note);
+                    Toast.makeText(itemView.getContext(), "Заметка удалена", Toast.LENGTH_SHORT).show();
                 }
             });
 
@@ -127,8 +130,12 @@ public class Adapter extends RecyclerView.Adapter<Adapter.NoteViewHolder> {
                     if (!silentUpdate) {
                         note.done = checked;
                         App.getInstance().getNoteDao().update(note);
+                        completed.setText("Выполнено");
+                    }else {
+                        completed.setText("В процессе");
+                            updateStrokeOut();
                     }
-                    updateStrokeOut();
+
                 }
             });
 
@@ -148,8 +155,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.NoteViewHolder> {
         private void updateStrokeOut() {
             if (note.done) {
                 noteText.setPaintFlags(noteText.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                completed.setText("Выполнено");
             } else {
                 noteText.setPaintFlags(noteText.getPaintFlags() & ~Paint.STRIKE_THRU_TEXT_FLAG);
+                completed.setText("В процессе");
             }
         }
     }

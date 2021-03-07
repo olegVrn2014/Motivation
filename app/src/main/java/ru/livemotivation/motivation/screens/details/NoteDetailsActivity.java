@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,6 +23,7 @@ public class NoteDetailsActivity extends AppCompatActivity {
     private Note note;
 
     private EditText editText;
+    private Button buttonAdd;
 
     public static void start(Activity caller, Note note) {
         Intent intent = new Intent(caller, NoteDetailsActivity.class);
@@ -44,6 +47,25 @@ public class NoteDetailsActivity extends AppCompatActivity {
         setTitle("Заметка");
 
         editText = findViewById(R.id.text);
+        buttonAdd = findViewById(R.id.buttonAdd);
+
+        buttonAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                        if (editText.getText().length() > 0) {
+                            note.text = editText.getText().toString();
+                            note.done = false;
+                            note.timestamp = System.currentTimeMillis();
+                            if (getIntent().hasExtra(EXTRA_NOTE)) {
+                                App.getInstance().getNoteDao().update(note);
+                            } else {
+                                App.getInstance().getNoteDao().insert(note);
+                            }
+                            finish();
+                        }
+
+            }
+        });
 
         if (getIntent().hasExtra(EXTRA_NOTE)) {
             note = getIntent().getParcelableExtra(EXTRA_NOTE);
