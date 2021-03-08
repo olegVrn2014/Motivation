@@ -53,26 +53,26 @@ public class AdviceActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.ic_main:
+                    case R.id.ic_quote:
                         Intent intent0 = new Intent(ru.livemotivation.motivation.AdviceActivity.this, MainActivity.class);
                         startActivity(intent0);
                         break;
 
-                    case R.id.ic_basics:
+                    case R.id.ic_advice:
 
                         break;
 
-                    case R.id.ic_oop:
+                    case R.id.ic_motivation:
                         Intent intent2 = new Intent(ru.livemotivation.motivation.AdviceActivity.this, MotivationActivity.class);
                         startActivity(intent2);
                         break;
 
-                    case R.id.ic_collections:
+                    case R.id.ic_habits:
                         Intent intent3 = new Intent(ru.livemotivation.motivation.AdviceActivity.this, HabitsActivity.class);
                         startActivity(intent3);
                         break;
 
-                    case R.id.ic_other:
+                    case R.id.ic_settings:
                         Intent intent4 = new Intent(ru.livemotivation.motivation.AdviceActivity.this, SettingsActivity.class);
                         startActivity(intent4);
                         break;

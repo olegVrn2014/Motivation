@@ -10,6 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Motivation">
+        <activity android:name=".Quote.QuoteFromBooks"></activity>
+        <activity android:name=".Quote.QuoteGreatPeople" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

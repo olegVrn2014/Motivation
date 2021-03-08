@@ -72,25 +72,25 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.ic_main:
+                    case R.id.ic_quote:
                         break;
 
-                    case R.id.ic_basics:
+                    case R.id.ic_advice:
                         Intent intent1 = new Intent(MainActivity.this, AdviceActivity.class);
                         startActivity(intent1);
                         break;
 
-                    case R.id.ic_oop:
+                    case R.id.ic_motivation:
                         Intent intent2 = new Intent(MainActivity.this, MotivationActivity.class);
                         startActivity(intent2);
                         break;
 
-                    case R.id.ic_collections:
+                    case R.id.ic_habits:
                         Intent intent3 = new Intent(MainActivity.this, HabitsActivity.class);
                         startActivity(intent3);
                         break;
 
-                    case R.id.ic_other:
+                    case R.id.ic_settings:
                         Intent intent4 = new Intent(MainActivity.this, SettingsActivity.class);
                         startActivity(intent4);
 

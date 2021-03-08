@@ -30,26 +30,26 @@ public class HabitsActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.ic_main:
+                    case R.id.ic_quote:
                         Intent intent0 = new Intent(ru.livemotivation.motivation.HabitsActivity.this, MainActivity.class);
                         startActivity(intent0);
                         break;
 
-                    case R.id.ic_basics:
+                    case R.id.ic_advice:
                         Intent intent1 = new Intent(ru.livemotivation.motivation.HabitsActivity.this, AdviceActivity.class);
                         startActivity(intent1);
                         break;
 
-                    case R.id.ic_oop:
+                    case R.id.ic_motivation:
                         Intent intent2 = new Intent(ru.livemotivation.motivation.HabitsActivity.this, ru.livemotivation.motivation.MotivationActivity.class);
                         startActivity(intent2);
                         break;
 
-                    case R.id.ic_collections:
+                    case R.id.ic_habits:
 
                         break;
 
-                    case R.id.ic_other:
+                    case R.id.ic_settings:
                         Intent intent4 = new Intent(ru.livemotivation.motivation.HabitsActivity.this, ru.livemotivation.motivation.SettingsActivity.class);
                         startActivity(intent4);
                         break;
