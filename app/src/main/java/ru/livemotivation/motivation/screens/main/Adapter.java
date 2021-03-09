@@ -11,12 +11,15 @@ import android.widget.CompoundButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SortedList;
 import ru.livemotivation.motivation.App;
+import ru.livemotivation.motivation.MainActivity;
 import ru.livemotivation.motivation.R;
 import ru.livemotivation.motivation.model.Note;
 import ru.livemotivation.motivation.screens.details.NoteDetailsActivity;
@@ -120,7 +123,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.NoteViewHolder> {
                 @Override
                 public void onClick(View view) {
                     App.getInstance().getNoteDao().delete(note);
-                    Toast.makeText(itemView.getContext(), "Заметка удалена", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(itemView.getContext(),"Заметка удалена", Toast.LENGTH_SHORT).show();
                 }
             });
 
@@ -130,10 +133,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.NoteViewHolder> {
                     if (!silentUpdate) {
                         note.done = checked;
                         App.getInstance().getNoteDao().update(note);
-                        completed.setText("Выполнено");
-                    }else {
-                        completed.setText("В процессе");
-                            updateStrokeOut();
+                        updateStrokeOut();
                     }
 
                 }
@@ -156,9 +156,11 @@ public class Adapter extends RecyclerView.Adapter<Adapter.NoteViewHolder> {
             if (note.done) {
                 noteText.setPaintFlags(noteText.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
                 completed.setText("Выполнено");
+                completed.setTextColor(Color.parseColor("#40F334"));
             } else {
                 noteText.setPaintFlags(noteText.getPaintFlags() & ~Paint.STRIKE_THRU_TEXT_FLAG);
                 completed.setText("В процессе");
+                completed.setTextColor(Color.parseColor("#FF0A0A"));
             }
         }
     }

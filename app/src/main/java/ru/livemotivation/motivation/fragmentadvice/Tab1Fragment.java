@@ -29,7 +29,7 @@ public class Tab1Fragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment1_layout, container, false);
         ArrayList<RecyclerViewQuote> recyclerViewItems = new ArrayList<>();
-        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.ic_launcher_background,"Цитаты великих людей","100+"));
+        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.great_people1,"Цитаты великих людей","100+"));
         recyclerViewItems.add(new RecyclerViewQuote(R.drawable.ic_launcher_background,"Цитаты из книг","100+"));
         recyclerViewItems.add(new RecyclerViewQuote(R.drawable.ic_launcher_background,"Цитаты из песен","100+"));
         recyclerViewItems.add(new RecyclerViewQuote(R.drawable.ic_launcher_background,"Цитаты из фильмов","100+"));

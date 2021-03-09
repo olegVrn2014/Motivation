@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/fon1"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -23,8 +24,11 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:background="@color/colorWhite"
+                android:background="@color/colorFon1"
+                app:title="Поставь себе цель!!!"
                 app:titleTextColor="@color/black"
+                app:subtitle="Заметки"
+                app:subtitleTextColor="#0066ff"
                 app:popupTheme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
 
         </com.google.android.material.appbar.AppBarLayout>
@@ -38,7 +42,7 @@
             android:layout_height="match_parent" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab_month"
+            android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/bottomBar"
@@ -46,6 +50,7 @@
             android:layout_gravity="bottom|end"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:backgroundTint="@color/colorFon1"
             android:layout_marginEnd="23dp"
             android:layout_marginBottom="21dp"
             app:srcCompat="@android:drawable/ic_input_add" />

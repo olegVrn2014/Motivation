@@ -69,4 +69,9 @@
     <string name="quote_61">Отпускайте идиотов и клоунов из своей жизни.  Цирк должен гастролировать!</string>
     <string name="quote_62">Если ты будешь колоть дрова сам, то согреешься ими дважды.</string>
     <string name="quote_63">Уважать всякого человека, как самого себя, и поступать с ним, как мы желаем, чтобы с нами поступали, — выше этого нет ничего.</string>
+
+    <string name="hint_text_note">Введите текст</string>
+    <string name="add_note">Добавить заметку</string>
+    <string name="new_note">Новая заметка</string>
+    <string name="note_delete">Заметка удалена</string>
 </resources>
