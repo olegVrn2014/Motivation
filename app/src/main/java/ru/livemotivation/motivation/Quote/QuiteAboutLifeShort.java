@@ -9,6 +9,7 @@ import ru.livemotivation.motivation.MainActivity;
 import ru.livemotivation.motivation.MotivationActivity;
 import ru.livemotivation.motivation.R;
 import ru.livemotivation.motivation.SettingsActivity;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,18 +18,18 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class QuoteFromBooks extends AppCompatActivity {
+public class QuiteAboutLifeShort extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.quote_from_books);
+        setContentView(R.layout.quite_about_life_short);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
-        setTitle("Цитаты из книг");
+        setTitle("Короткие о жизни");
 
 
 
@@ -44,28 +45,28 @@ public class QuoteFromBooks extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.ic_note:
-                        Intent intent0 = new Intent(QuoteFromBooks.this, MainActivity.class);
+                        Intent intent0 = new Intent(QuiteAboutLifeShort.this, MainActivity.class);
                         startActivity(intent0);
                         break;
 
                     case R.id.ic_advice:
-                        Intent intent1 = new Intent(QuoteFromBooks.this, AdviceActivity.class);
+                        Intent intent1 = new Intent(QuiteAboutLifeShort.this, AdviceActivity.class);
                         startActivity(intent1);
                         break;
 
                     case R.id.ic_motivation:
-                        Intent intent2 = new Intent(QuoteFromBooks.this, MotivationActivity.class);
+                        Intent intent2 = new Intent(QuiteAboutLifeShort.this, MotivationActivity.class);
                         startActivity(intent2);
                         break;
 
 
                     case R.id.ic_habits:
-                        Intent intent3 = new Intent(QuoteFromBooks.this, HabitsActivity.class);
+                        Intent intent3 = new Intent(QuiteAboutLifeShort.this, HabitsActivity.class);
                         startActivity(intent3);
                         break;
 
                     case R.id.ic_settings:
-                        Intent intent4 = new Intent(QuoteFromBooks.this, SettingsActivity.class);
+                        Intent intent4 = new Intent(QuiteAboutLifeShort.this, SettingsActivity.class);
                         startActivity(intent4);
                         break;
                 }

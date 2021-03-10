@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/fon3"
     android:layout_height="match_parent"
-    tools:context=".Quote.QuoteGreatPeople">
+    tools:context=".Quote.QuiteWithMeans">
 
 
     <RelativeLayout

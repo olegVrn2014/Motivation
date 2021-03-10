@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.ic_quote:
+                    case R.id.ic_note:
                         break;
 
                     case R.id.ic_advice:

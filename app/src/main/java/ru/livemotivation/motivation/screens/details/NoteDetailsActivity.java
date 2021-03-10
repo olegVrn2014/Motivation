@@ -20,7 +20,6 @@ import ru.livemotivation.motivation.AdviceActivity;
 import ru.livemotivation.motivation.App;
 import ru.livemotivation.motivation.BottomNavigationViewHelper;
 import ru.livemotivation.motivation.HabitsActivity;
-import ru.livemotivation.motivation.MainActivity;
 import ru.livemotivation.motivation.MotivationActivity;
 import ru.livemotivation.motivation.R;
 import ru.livemotivation.motivation.SettingsActivity;
@@ -88,7 +87,7 @@ public class NoteDetailsActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.ic_quote:
+                    case R.id.ic_note:
                         break;
 
                     case R.id.ic_advice:

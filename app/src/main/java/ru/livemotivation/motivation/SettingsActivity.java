@@ -35,7 +35,7 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.ic_quote:
+                    case R.id.ic_note:
                         Intent intent0 = new Intent(ru.livemotivation.motivation.SettingsActivity.this, MainActivity.class);
                         startActivity(intent0);
                         break;

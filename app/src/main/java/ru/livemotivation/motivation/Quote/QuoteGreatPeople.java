@@ -2,7 +2,9 @@ package ru.livemotivation.motivation.Quote;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import ru.livemotivation.motivation.AdviceActivity;
+import ru.livemotivation.motivation.App;
 import ru.livemotivation.motivation.HabitsActivity;
 import ru.livemotivation.motivation.MainActivity;
 import ru.livemotivation.motivation.MotivationActivity;
@@ -14,6 +16,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -23,6 +26,12 @@ public class QuoteGreatPeople extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quote_great_people);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        setTitle("Цитаты великих людей");
 
 
 
@@ -37,7 +46,7 @@ public class QuoteGreatPeople extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.ic_quote:
+                    case R.id.ic_note:
                         Intent intent0 = new Intent(QuoteGreatPeople.this, MainActivity.class);
                         startActivity(intent0);
                         break;
@@ -67,6 +76,24 @@ public class QuoteGreatPeople extends AppCompatActivity {
                 return false;
             }
         });
+    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.menu_quote, menu);
+//        return super.onCreateOptionsMenu(menu);
+//    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                break;
+//            case R.id.action_search:
+//                Toast.makeText(this, "Поиск", Toast.LENGTH_SHORT).show();
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 
