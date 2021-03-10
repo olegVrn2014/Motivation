@@ -30,21 +30,20 @@ public class Tab1Fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment1_layout, container, false);
         ArrayList<RecyclerViewQuote> recyclerViewItems = new ArrayList<>();
         recyclerViewItems.add(new RecyclerViewQuote(R.drawable.great_people1,"Цитаты великих людей","100+"));
-        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.ic_launcher_background,"Цитаты из книг","100+"));
-        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.ic_launcher_background,"Цитаты из песен","100+"));
-        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.ic_launcher_background,"Цитаты из фильмов","100+"));
-        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.ic_launcher_background,"Цитаты про жизнь со смыслом","100+"));
-        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.ic_launcher_background,"Цитаты со смыслом","100+"));
-        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.ic_launcher_background,"Успех","100+"));
-        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.ic_launcher_background,"Умные фразы","100+"));
-        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.ic_launcher_background,"Счастье","100+"));
-        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.ic_launcher_background,"Дружба и друзья","100+"));
-        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.ic_launcher_background,"Жизнь","100+"));
-        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.ic_launcher_background,"Короткие цитаты о жизни","100+"));
-        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.ic_launcher_background,"Красивые цитаты","100+"));
-        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.ic_launcher_background,"Любовь","100+"));
-        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.ic_launcher_background,"Мечты","100+"));
-        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.ic_launcher_background,"Мысли","100+"));
+        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.books_2,"Цитаты из книг","100+"));
+        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.songs3,"Цитаты из песен","100+"));
+        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.films4,"Цитаты из фильмов","100+"));
+        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.life5,"Цитаты про жизнь","100+"));
+        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.mean6,"Цитаты со смыслом","100+"));
+        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.succes7,"Успех","100+"));
+        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.frase8,"Умные фразы","100+"));
+        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.happiness9,"Счастье","100+"));
+        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.friemds10,"Дружба и друзья","100+"));
+        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.life11,"Короткие о жизни","100+"));
+        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.beautufull12,"Красивые цитаты","100+"));
+        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.love13,"Любовь","100+"));
+        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.dreams14,"Мечты","100+"));
+        recyclerViewItems.add(new RecyclerViewQuote(R.drawable.though15,"Мысли","100+"));
 
 
         recyclerView = view.findViewById(R.id.recyclerViewQuote);

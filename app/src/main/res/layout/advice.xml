@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/fon3"
     android:layout_height="match_parent"
     tools:context=".AdviceActivity">
 
@@ -26,8 +27,9 @@
                 <com.google.android.material.tabs.TabLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:tabTextColor="@color/white"
                     android:id="@+id/tabs"
-                    android:background="@drawable/white_grey_border_bottom">
+                    android:background="@color/colorBlueLight">
 
 
                 </com.google.android.material.tabs.TabLayout>
@@ -67,7 +69,7 @@
                 android:id="@+id/bottomNavView_Bar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/white_grey_border_top"
+                android:background="@drawable/white_blue_top"
                 app:menu="@menu/bottom_navigation_menu">
 
 
